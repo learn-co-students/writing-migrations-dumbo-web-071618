@@ -7,7 +7,9 @@ DatabaseTasks.migrations_paths = ['db/migrate']
 load 'active_record/railties/databases.rake'
 
 task :console => :environment do
-  Pry.start
+require 'irb'
+  ARGV.clear
+  IRB.start
 end
 
 task :environment do
